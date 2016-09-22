@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Demo suite" verbose="1" >
+
+    <test name="Test suite for testing Calculation service" >
+        <classes>
+            <class name="com.soap.NewTest" />
+        </classes>
+    </test>
+
+</suite>
