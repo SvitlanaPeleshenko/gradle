@@ -5,7 +5,7 @@ import org.junit.runner.RunWith;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(format = {"pretty", "html:build/reports","pretty:build/cucumber-report.json"})
+@CucumberOptions(format = {"pretty", "html:build/reports","pretty:build/cucumber-report.json"},features="src/test/resources")
 public class RunTest {}
 
 /*@RunWith(CucumberWithSerenity.class)
