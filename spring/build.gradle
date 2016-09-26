@@ -41,6 +41,7 @@ dependencies {
     compile group: 'net.masterthought', name: 'cucumber-reporting', version: '0.4.0'
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.8.3'
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.8.3'
+    compile group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-xml', version: '2.8.3'
     compile(group: 'com.atlassian.jira', name: 'jira-rest-java-client', version:'2.0.0-m2') {
         exclude(module: 'stax-api')
     }
