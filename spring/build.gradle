@@ -1,7 +1,12 @@
-
 configurations {
     jaxb
 }
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+apply plugin: 'maven'
+apply plugin: 'groovy'
 
 
 buildscript {
@@ -13,11 +18,7 @@ buildscript {
     }
 }
 
-apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'idea'
-apply plugin: 'spring-boot'
-apply plugin: 'maven'
+
 
 repositories {
 
@@ -37,7 +38,7 @@ dependencies {
     compile group: 'org.springframework.ws', name: 'spring-ws-core', version: '2.3.0.RELEASE'
     compile group: 'soap', name: 'soap', version: '2.3.1'
     compile group: 'org.jvnet.jaxb2.maven2', name: 'maven-jaxb2-plugin', version: '0.13.1'
-    compile group: 'net.masterthought', name: 'cucumber-reporting', version: '0.0.23'
+    compile group: 'net.masterthought', name: 'cucumber-reporting', version: '0.4.0'
     compile(group: 'com.atlassian.jira', name: 'jira-rest-java-client', version:'2.0.0-m2') {
         exclude(module: 'stax-api')
     }
@@ -46,7 +47,7 @@ dependencies {
     //compile group: 'javax.xml', name: 'jaxb-api', version:'2.1'
     compile group: 'net.serenity-bdd', name: 'serenity-cucumber', version:'1.1.5'
     compile group: 'org.slf4j', name: 'slf4j-simple', version:'1.6.1'
-    //compile group: 'junit', name: 'junit', version:'4.12'
+    compile group: 'junit', name: 'junit', version:'4.12'
     compile group: 'info.cukes', name: 'cucumber-junit', version:'1.2.4'
     compile group: 'com.optimaize.anythingworks.client.soap', name: 'anythingworks-client-soap', version: '0.5'
     testCompile group: 'org.assertj', name: 'assertj-core', version:'1.7.0'
@@ -123,7 +124,7 @@ task cucumber() {
         javaexec {
             main = "cucumber.api.cli.Main"
             classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
-            args = ['--plugin', 'pretty', '--glue', 'gradle.cucumber', 'src/test/resources']
+            args = ['-f', 'pretty', '--glue', 'gradle.cucumber', 'src/test/resources']
         }
     }
 }
@@ -134,6 +135,7 @@ dependencies {
 
     testCompile 'junit:junit:4.12'
 }
+
 
 
 
