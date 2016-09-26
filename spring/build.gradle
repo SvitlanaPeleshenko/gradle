@@ -39,6 +39,8 @@ dependencies {
     compile group: 'soap', name: 'soap', version: '2.3.1'
     compile group: 'org.jvnet.jaxb2.maven2', name: 'maven-jaxb2-plugin', version: '0.13.1'
     compile group: 'net.masterthought', name: 'cucumber-reporting', version: '0.4.0'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.8.3'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.8.3'
     compile(group: 'com.atlassian.jira', name: 'jira-rest-java-client', version:'2.0.0-m2') {
         exclude(module: 'stax-api')
     }
